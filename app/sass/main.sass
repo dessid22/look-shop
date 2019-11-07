@@ -334,6 +334,108 @@ ul, li
 	&:hover
 		background-color: lighten($accent-color, 5%)
 
+/* TOP SLIDER */
+
+.top-slider-wrap
+	position: relative
+
+.top-slider
+	&__item
+		height: 440px
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 66%
+			height: 7px
+			left: 0
+			bottom: 0
+			background-color: rgba(#000, .2)
+	.owl-nav
+		position: absolute
+		width: 100%
+		top: 50%
+		margin-top: -60px
+	.owl-nav button.owl-next,
+	.owl-nav button.owl-prev,
+		width: 30px
+		height: 120px
+		background-color: #fefefd
+		position: absolute
+		outline: none
+		transition: all .5s ease
+		&:hover
+			background-color: $accent-color
+			&::before
+				color: #fff
+		span
+			display: none
+		&::before
+			content: "\e90b"
+			font-family: 'icomoon'
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-size: 1.2rem
+			color: #cbcbca
+
+	.owl-nav button.owl-next
+		right: 0
+		&::before
+			content: "\e90d"
+	.owl-dots
+		position: absolute
+		bottom: -40px
+		width: 100%
+		text-align: center
+	button.owl-dot
+		height: 12px
+		width: 12px
+		background-color: #867a76
+		border-radius: 50%
+		margin: 0px 9px
+		outline: none
+		&:hover
+			background-color: $accent-color
+	button.owl-dot.active
+		background-color: $accent-color
+
+.slider-wow
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: 15%
+	z-index: 1
+	&__pic
+		display: block
+		margin-bottom: 10px
+		width: 100%
+	&__btn-wrap
+		text-align: center
+
+.btn
+	background-color: $accent-color
+	color: #fff
+	text-transform: uppercase
+	padding: 15px 25px
+	display: inline-block
+	line-height: 1
+	cursor: pointer
+	outline: none
+	transition: all .5s ease
+	text-decoration: none
+	border-bottom: 3px solid #dd6b44
+	font-family: "RobotoRegular"
+	font-weight: 300
+	font-size: .9rem
+	&:hover
+		background-color: lighten($accent-color, 5%)
+		text-decoration: none
+		color: #fff
 
 
 /* allways bottom */

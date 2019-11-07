@@ -5,6 +5,20 @@
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: "AEmpirial";
+  src: url("../fonts/AEmpirial/AEmpirial.eot");
+  src: url("../fonts/AEmpirial/AEmpirial.eot?#iefix") format("embedded-opentype"), url("../fonts/AEmpirial/AEmpirial.woff") format("woff"), url("../fonts/AEmpirial/AEmpirial.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 /* default settings */
 *::-webkit-input-placeholder {
   color: #777;
@@ -405,6 +419,124 @@ ul, li {
   .burger-link:hover {
     background-color: #fda486; }
 
+/* TOP SLIDER */
+.top-slider-wrap {
+  position: relative; }
+
+.top-slider__item {
+  height: 440px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .top-slider__item::after {
+    content: '';
+    position: absolute;
+    width: 66%;
+    height: 7px;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); }
+
+.top-slider .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -60px; }
+
+.top-slider .owl-nav button.owl-next,
+.top-slider .owl-nav button.owl-prev {
+  width: 30px;
+  height: 120px;
+  background-color: #fefefd;
+  position: absolute;
+  outline: none;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+  .top-slider .owl-nav button.owl-next:hover,
+  .top-slider .owl-nav button.owl-prev:hover {
+    background-color: #fc916d; }
+    .top-slider .owl-nav button.owl-next:hover::before,
+    .top-slider .owl-nav button.owl-prev:hover::before {
+      color: #fff; }
+  .top-slider .owl-nav button.owl-next span,
+  .top-slider .owl-nav button.owl-prev span {
+    display: none; }
+  .top-slider .owl-nav button.owl-next::before,
+  .top-slider .owl-nav button.owl-prev::before {
+    content: "\e90b";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #cbcbca; }
+
+.top-slider .owl-nav button.owl-next {
+  right: 0; }
+  .top-slider .owl-nav button.owl-next::before {
+    content: "\e90d"; }
+
+.top-slider .owl-dots {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  text-align: center; }
+
+.top-slider button.owl-dot {
+  height: 12px;
+  width: 12px;
+  background-color: #867a76;
+  border-radius: 50%;
+  margin: 0px 9px;
+  outline: none; }
+  .top-slider button.owl-dot:hover {
+    background-color: #fc916d; }
+
+.top-slider button.owl-dot.active {
+  background-color: #fc916d; }
+
+.slider-wow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15%;
+  z-index: 1; }
+  .slider-wow__pic {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%; }
+  .slider-wow__btn-wrap {
+    text-align: center; }
+
+.btn {
+  background-color: #fc916d;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  text-decoration: none;
+  border-bottom: 3px solid #dd6b44;
+  font-family: "RobotoRegular";
+  font-weight: 300;
+  font-size: .9rem; }
+  .btn:hover {
+    background-color: #fda486;
+    text-decoration: none;
+    color: #fff; }
+
 /* allways bottom */
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
@@ -420,7 +552,12 @@ ul, li {
     margin-bottom: 40px; } }
 
 @media only screen and (max-width: 767px) {
-  /**/ }
+  .slider-wow {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); } }
 
 @media only screen and (max-width: 575px) {
   .custom-care {

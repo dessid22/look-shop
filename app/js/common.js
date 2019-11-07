@@ -73,6 +73,17 @@ $( document ).ready(function(){
     }
 	});
 
+	$(".top-slider").owlCarousel({
+		items: 1,
+		nav: true,
+		loop: true,
+		smartSpeed: 800,
+		fluidSpeed: 800,
+		navSpeed: 800,
+		dotsSpeed: 800,
+		dragEndSpeed: 800
+	});
+
 	//E-mail Ajax Send
 	$("").submit(function() { //Change
 		var th = $(this);
