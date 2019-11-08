@@ -21,15 +21,15 @@
 
 /* default settings */
 *::-webkit-input-placeholder {
-  color: #777;
+  color: #9f9f9f;
   opacity: 1; }
 
 *::-moz-placeholder {
-  color: #777;
+  color: #9f9f9f;
   opacity: 1; }
 
 *:-ms-input-placeholder {
-  color: #777;
+  color: #9f9f9f;
   opacity: 1; }
 
 *::-ms-clear {
@@ -65,6 +65,14 @@ ul, li {
   list-style: none;
   padding: 0;
   margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0; }
+
+* {
+  margin: 0;
+  padding: 0; }
 
 /* HEADER */
 /* TOP LINE */
@@ -268,7 +276,7 @@ ul, li {
     left: 0;
     margin-top: 10px;
     padding: 5px 20px;
-    z-index: 2; }
+    z-index: 3; }
   .basic-menu__sub-item {
     margin: 5px 0; }
   .basic-menu__sub-link {
@@ -347,7 +355,7 @@ ul, li {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 2; }
   .my-cart__item {
     padding: 5px 10px;
     position: relative; }
@@ -421,7 +429,8 @@ ul, li {
 
 /* TOP SLIDER */
 .top-slider-wrap {
-  position: relative; }
+  position: relative;
+  margin-bottom: 70px; }
 
 .top-slider__item {
   height: 440px;
@@ -483,7 +492,7 @@ ul, li {
 
 .top-slider .owl-dots {
   position: absolute;
-  bottom: -40px;
+  bottom: -48px;
   width: 100%;
   text-align: center; }
 
@@ -519,23 +528,117 @@ ul, li {
   background-color: #fc916d;
   color: #fff;
   text-transform: uppercase;
-  padding: 15px 25px;
-  display: inline-block;
-  line-height: 1;
+  padding: 15px 25px 15px 25px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   outline: none;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
   text-decoration: none;
-  border-bottom: 3px solid #dd6b44;
+  border: none;
+  border-bottom: 2px solid #dd6b44;
   font-family: "RobotoRegular";
   font-weight: 300;
   font-size: .9rem; }
+  .btn .icon-caret-right {
+    margin-left: 15px; }
   .btn:hover {
     background-color: #fda486;
     text-decoration: none;
     color: #fff; }
+  .btn_small {
+    padding: 7px 10px;
+    font-size: 1.2rem; }
+
+/* FOLLOW US */
+.follow-us {
+  background-color: #ededed;
+  color: #6c6c6c;
+  font-size: .8rem; }
+
+.stay-updated {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .stay-updated h4 {
+    font-weight: 400;
+    margin-right: 15px;
+    white-space: nowrap; }
+  .stay-updated__input {
+    font-size: .8rem;
+    display: block;
+    border: 1px solid #fff;
+    outline: none;
+    padding: 7px 15px;
+    background-color: #fff;
+    color: #6c6c6c;
+    width: 50%; }
+    .stay-updated__input:focus:required:invalid {
+      color: #fc916d;
+      border: 1px solid #fc916d;
+      background-color: #fff; }
+    .stay-updated__input:required:valid {
+      border: 1px solid  #6c6c6c;
+      color: #6c6c6c;
+      background-color: #fff; }
+
+.find-us {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .find-us h4 {
+    font-weight: 400; }
+
+.social-box {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .social-box__item {
+    display: block;
+    padding: 15px 17px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #6c6c6c;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .social-box__item span {
+      display: block; }
+    .social-box__item:nth-child(even) {
+      background-color: #f7f7f7; }
+    .social-box__item:hover {
+      text-decoration: none;
+      color: #fc916d; }
 
 /* allways bottom */
 /*==========  Desktop First Method  ==========*/
@@ -557,29 +660,33 @@ ul, li {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); } }
-
-@media only screen and (max-width: 575px) {
-  .custom-care {
+            transform: translate(-50%, -50%); }
+  .follow-us {
+    padding: 15px 0;
+    text-align: center; }
+    .follow-us div[class*="col-"] {
+      margin: 15px 0; }
+  .find-us {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .my-account {
+  .stay-updated {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    border-bottom: 1px solid #444; }
-  .top-line {
-    font-size: .75rem; }
+            justify-content: center; }
+    .stay-updated h4 {
+      white-space: normal; }
+    .stay-updated__input {
+      width: 100%; }
   .burger-link {
     display: block; }
   .basic-menu {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     width: 200px;
     height: 100vh;
     -webkit-transition: all 0.5s ease;
@@ -618,6 +725,21 @@ ul, li {
     -webkit-align-items: start;
         -ms-flex-align: start;
             align-items: start; } }
+
+@media only screen and (max-width: 575px) {
+  .custom-care {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .my-account {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 1px solid #444; }
+  .top-line {
+    font-size: .75rem; } }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */

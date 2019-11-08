@@ -6,15 +6,15 @@
 /* default settings */
 
 *::-webkit-input-placeholder
-	color: #777
+	color: #9f9f9f
 	opacity: 1
 
 *::-moz-placeholder
-	color: #777
+	color: #9f9f9f
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #777
+	color: #9f9f9f
 	opacity: 1
 
 *::-ms-clear // убрать крестик очистки поля в IE
@@ -50,6 +50,14 @@ ul, li
 	list-style: none
 	padding: 0
 	margin: 0
+
+h1, h2, h3, h4, h5
+	margin: 0
+	padding: 0
+
+*
+	margin: 0
+	padding: 0
 
 /* HEADER */
 
@@ -214,7 +222,7 @@ ul, li
 		left: 0
 		margin-top: 10px
 		padding: 5px 20px
-		z-index: 2
+		z-index: 3
 	&__sub-item
 		margin: 5px 0
 
@@ -271,7 +279,7 @@ ul, li
 	height: 100%
 	top: 0
 	left: 0
-	z-index: 1
+	z-index: 2
 	&__item
 		padding: 5px 10px
 		position: relative
@@ -338,6 +346,7 @@ ul, li
 
 .top-slider-wrap
 	position: relative
+	margin-bottom: 70px
 
 .top-slider
 	&__item
@@ -389,7 +398,7 @@ ul, li
 			content: "\e90d"
 	.owl-dots
 		position: absolute
-		bottom: -40px
+		bottom: -48px
 		width: 100%
 		text-align: center
 	button.owl-dot
@@ -421,21 +430,89 @@ ul, li
 	background-color: $accent-color
 	color: #fff
 	text-transform: uppercase
-	padding: 15px 25px
-	display: inline-block
-	line-height: 1
+	padding: 15px 25px 15px 25px
+	display: inline-flex
+	align-items: center
 	cursor: pointer
 	outline: none
 	transition: all .5s ease
 	text-decoration: none
-	border-bottom: 3px solid #dd6b44
+	border: none
+	border-bottom: 2px solid #dd6b44
 	font-family: "RobotoRegular"
 	font-weight: 300
 	font-size: .9rem
+	.icon-caret-right
+		margin-left: 15px
 	&:hover
 		background-color: lighten($accent-color, 5%)
 		text-decoration: none
 		color: #fff
+	&_small
+		padding: 7px 10px
+		font-size: 1.2rem
+
+
+/* FOLLOW US */
+
+.follow-us
+	background-color: #ededed
+	color: #6c6c6c
+	font-size: .8rem
+
+.stay-updated
+	height: 100%
+	display: flex
+	align-items: center
+	h4
+		font-weight: 400
+		margin-right: 15px
+		white-space: nowrap
+	&__input
+		font-size: .8rem
+		display: block
+		border: 1px solid #fff
+		outline: none
+		padding: 7px 15px
+		background-color: #fff
+		color: #6c6c6c
+		width: 50%
+		&:focus:required:invalid
+			color: $accent-color
+			border: 1px solid $accent-color
+			background-color: #fff
+		&:required:valid
+			border: 1px solid  #6c6c6c
+			color: #6c6c6c
+			background-color: #fff
+
+.find-us
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	h4
+		font-weight: 400
+
+.social-box
+	height: 100%
+	display: flex
+	align-items: center
+	&__item
+		display: block
+		padding: 15px 17px
+		font-size: 1.5rem
+		text-decoration: none
+		color: #6c6c6c
+		transition: all .5s ease
+		span
+			display: block
+		&:nth-child(even)
+			background-color: #f7f7f7
+		&:hover
+			text-decoration: none
+			color: $accent-color
+
 
 
 /* allways bottom */
