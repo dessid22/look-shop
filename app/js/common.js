@@ -73,6 +73,7 @@ $( document ).ready(function(){
     }
 	});
 
+	// Настройки слайдера .top-slider
 	$(".top-slider").owlCarousel({
 		items: 1,
 		nav: true,
@@ -82,6 +83,44 @@ $( document ).ready(function(){
 		navSpeed: 800,
 		dotsSpeed: 800,
 		dragEndSpeed: 800
+	});
+
+	$(".goods-slider").owlCarousel({
+		// stagePadding: 127,
+    	loop: true,
+    	margin: 30,
+    	nav: true,
+    	slideBy: 2,
+    	responsiveClass: true,
+	    responsive:{
+	        0:{
+	            items: 2
+	        },
+	        576:{
+	            items: 2
+	        },
+	        768:{
+	            items: 3
+	        },
+	        992:{
+	            items: 4
+	        },
+	        1200:{
+	            items: 4
+	        }
+	    },
+	    dots: false,
+	    smartSpeed: 400,
+		fluidSpeed: 400,
+		navSpeed: 400,
+		dotsSpeed: 400,
+		dragEndSpeed: 400,
+		navText: ['<span class="icon-chevron-thin-left"></span>', 
+		'<span class="icon-chevron-thin-right"></span>']
+	});
+
+	$(".test-slider").owlCarousel({
+		
 	});
 
 	//E-mail Ajax Send
