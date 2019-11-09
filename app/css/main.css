@@ -75,6 +75,9 @@ h1, h2, h3, h4, h5 {
   padding: 0; }
 
 /* HEADER */
+header {
+  margin-bottom: 40px; }
+
 /* TOP LINE */
 .top-line {
   background-color: #000;
@@ -492,9 +495,16 @@ h1, h2, h3, h4, h5 {
 
 .top-slider .owl-dots {
   position: absolute;
-  bottom: -48px;
+  bottom: -40px;
   width: 100%;
-  text-align: center; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .top-slider button.owl-dot {
   height: 12px;
@@ -528,7 +538,7 @@ h1, h2, h3, h4, h5 {
   background-color: #fc916d;
   color: #fff;
   text-transform: uppercase;
-  padding: 15px 25px 15px 25px;
+  padding: 15px 25px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -547,7 +557,8 @@ h1, h2, h3, h4, h5 {
   border-bottom: 2px solid #dd6b44;
   font-family: "RobotoRegular";
   font-weight: 300;
-  font-size: .9rem; }
+  font-size: .9rem;
+  white-space: nowrap; }
   .btn .icon-caret-right {
     margin-left: 15px; }
   .btn:hover {
@@ -639,6 +650,91 @@ h1, h2, h3, h4, h5 {
     .social-box__item:hover {
       text-decoration: none;
       color: #fc916d; }
+
+/* STOCK */
+.s-stock {
+  margin-bottom: 50px; }
+
+.stock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 340px;
+  overflow: hidden; }
+  .stock__item {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 0px 2px #fff;
+            box-shadow: 0px 0px 0px 2px #fff;
+    position: relative;
+    display: block; }
+    .stock__item::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease; }
+    .stock__item:hover::before {
+      background-color: rgba(0, 0, 0, 0.1); }
+  .stock__block1 {
+    width: 50%; }
+  .stock__block2 {
+    width: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .stock__block3 {
+    height: 50%; }
+  .stock__block4 {
+    height: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .stock__block5 {
+    width: 50%; }
+  .stock__block6 {
+    width: 50%; }
+  .stock__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: block; }
+    .stock__title_left {
+      left: 10%;
+      -webkit-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
+              transform: translate(0, -50%); }
+  .stock h4 {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "AEmpirial";
+    line-height: 1;
+    font-weight: 300;
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px; }
 
 /* allways bottom */
 /*==========  Desktop First Method  ==========*/
@@ -739,7 +835,24 @@ h1, h2, h3, h4, h5 {
             justify-content: center;
     border-bottom: 1px solid #444; }
   .top-line {
-    font-size: .75rem; } }
+    font-size: .75rem; }
+  .stock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 510px; }
+    .stock__block1 {
+      width: 100%;
+      height: 33.3%; }
+    .stock__block2 {
+      width: 100%;
+      height: 66.6%; }
+    .stock__title_center {
+      width: 30%; }
+  .btn {
+    padding: 10px 15px; } }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
