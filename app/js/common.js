@@ -135,20 +135,27 @@ $( document ).ready(function(){
 		});
 	});
 
-	$("#wr-tabs").on("click", ".tab", function(){
+	// Выпадающий список .sort
+	$(".sort").on("click", ".init", function() {
+    	$(this).closest(".sort").children('.sort__item:not(.init)').toggle();
+	});
 
-     var tabs = $("#wr-tabs .tab"),
-            cont = $("#wr-tabs .tab-cont");
+	var Options = $(".sort").children('.sort__item:not(.init)');
+	$(".sort").on("click", ".sort__item:not(.init)", function() {
+	    Options.removeClass('selected');
+	    $(this).addClass('selected');
+	    $(".sort").children('.init').html($(this).html());
+	    Options.toggle();
+	});
 
-       // Удаляем классы active
-        tabs.removeClass("active");
-       cont.removeClass("active");
-       // Добавляем классы active
-      $(this).addClass("active");
-       cont.eq($(this).index()).addClass("active");
-
-      return false;
-   });
+	// Закрыть выпадающий список .sort
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $('.sort__item:not([class*="init"])'); // берем li, у которых нет класса init
+		if (!div.is(e.target)) // если клик был не по нашему блоку
+ 		{
+			div.hide(); // скрываем его
+		}
+	});
 
 	//E-mail Ajax Send
 	$("").submit(function() { //Change
