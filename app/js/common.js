@@ -85,8 +85,9 @@ $( document ).ready(function(){
 		dragEndSpeed: 800
 	});
 
+	
+	// Настройки слайдера .goods-slider
 	$(".goods-slider").owlCarousel({
-		// stagePadding: 127,
     	loop: true,
     	margin: 30,
     	nav: true,
@@ -119,9 +120,35 @@ $( document ).ready(function(){
 		'<span class="icon-chevron-thin-right"></span>']
 	});
 
-	$(".test-slider").owlCarousel({
-		
+	// Табы (для слайдера .goods-slider)
+	$(function() {
+		$("ul.tabs__caption").on("click", "li:not(.active)", function() {
+		$(this)
+		.addClass("active")
+		.siblings()
+		.removeClass("active")
+		.closest("div.tabs")
+		.find("div.tabs__content")
+		.removeClass("active")
+		.eq($(this).index())
+		.addClass("active");
+		});
 	});
+
+	$("#wr-tabs").on("click", ".tab", function(){
+
+     var tabs = $("#wr-tabs .tab"),
+            cont = $("#wr-tabs .tab-cont");
+
+       // Удаляем классы active
+        tabs.removeClass("active");
+       cont.removeClass("active");
+       // Добавляем классы active
+      $(this).addClass("active");
+       cont.eq($(this).index()).addClass("active");
+
+      return false;
+   });
 
 	//E-mail Ajax Send
 	$("").submit(function() { //Change

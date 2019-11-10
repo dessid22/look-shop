@@ -743,8 +743,45 @@ header
 		&:hover
 
 
+/* test */
 
+.tabs
+	position: relative
 
+.tabs__caption
+	position: absolute
+	top: -50px
+	display: flex
+	z-index: 10
+
+.tabs__caption li
+	height: 50px
+	background-color: #fff
+	text-transform: uppercase
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 0 20px
+	font-family: Arial, sans-serif
+	color: #555
+	font-size: .95rem
+	transition: all .3s ease
+
+.tabs__caption li:not(.active)
+	cursor: pointer
+	&:hover
+		background-color: #f2f2f2
+
+.tabs__caption .active
+	color: green
+	background-color: $accent-color
+	color: #fff
+
+.tabs__content
+	display: none
+
+.tabs__content.active
+	display: block
 
 
 /* allways bottom */

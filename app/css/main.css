@@ -936,6 +936,59 @@ header {
     background-color: #fc916d;
     color: #fff; }
 
+/* test */
+.tabs {
+  position: relative; }
+
+.tabs__caption {
+  position: absolute;
+  top: -50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10; }
+
+.tabs__caption li {
+  height: 50px;
+  background-color: #fff;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  color: #555;
+  font-size: .95rem;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.tabs__caption li:not(.active) {
+  cursor: pointer; }
+  .tabs__caption li:not(.active):hover {
+    background-color: #f2f2f2; }
+
+.tabs__caption .active {
+  color: green;
+  background-color: #fc916d;
+  color: #fff; }
+
+.tabs__content {
+  display: none; }
+
+.tabs__content.active {
+  display: block; }
+
 /* allways bottom */
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
