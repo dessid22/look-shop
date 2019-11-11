@@ -932,7 +932,7 @@ header
 
 .sidebar-module
 	// border: 1px solid green
-	// padding-bottom: 15px
+	margin-bottom: 40px
 
 .sidebar-title
 	background-color: #000
@@ -943,6 +943,87 @@ header
 	padding: 10px
 	font-weight: 300
 	// margin-bottom: 15px
+
+/* RANGE SLIDER */
+
+.price-select
+	color: #848484
+	text-transform: uppercase
+	font-family: Arial, sans-serif
+	font-size: .8rem
+	&__content
+		display: flex
+		align-items: center
+		justify-content: space-between
+	#slider-range
+		background-color: #e5e5e5
+		border: none
+		border-radius: 0
+		height: 6px
+		margin-bottom: 10px
+	.ui-slider-range
+		background-color: $accent-color
+	.ui-slider .ui-slider-handle
+		background: $accent-color
+		border: none
+		border-radius: 50%
+		height: 14px
+		width: 14px
+		outline: none
+		cursor: pointer
+	#amount
+		border: none
+		width: 50%
+		padding: 0
+		color: #848484
+		outline: none
+
+/* RADIO */
+
+.my-size
+	input[type="checkbox"]
+		display: none
+	label
+		cursor: pointer
+	label::before
+		content: 'XS'
+		display: block
+		background-color: #f4f4f4
+		color: #4d4d4d
+		font-size: .8rem
+		height: 36px
+		width: 36px
+		text-align: center
+		padding: 9px 0px
+	input[type="checkbox"]:checked + label::before
+		background-color: $accent-color
+		color: #fff
+	&__list
+		display: flex
+	&__item
+		margin-right: 8px
+		&:nth-child(2)
+			label::before
+				content: 'S'
+		&:nth-child(3)
+			label::before
+				content: 'M'
+		&:nth-child(4)
+			label::before
+				content: 'L'
+		&:nth-child(5)
+			label::before
+				content: 'XL'
+	&__title
+		font-size: .8rem
+		color: #4d4d4d
+		font-weight: 300
+		text-transform: uppercase
+		font-family: Arial, sans-serif
+		margin-bottom: 10px
+		line-height: 1
+
+
 
 /* allways bottom */
 

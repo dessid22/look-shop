@@ -1186,6 +1186,9 @@ header {
             transform: translateY(-50%);
     color: #fc916d; }
 
+.sidebar-module {
+  margin-bottom: 40px; }
+
 .sidebar-title {
   background-color: #000;
   color: #fff;
@@ -1194,6 +1197,96 @@ header {
   font-size: .8rem;
   padding: 10px;
   font-weight: 300; }
+
+/* RANGE SLIDER */
+.price-select {
+  color: #848484;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-size: .8rem; }
+  .price-select__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .price-select #slider-range {
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 0;
+    height: 6px;
+    margin-bottom: 10px; }
+  .price-select .ui-slider-range {
+    background-color: #fc916d; }
+  .price-select .ui-slider .ui-slider-handle {
+    background: #fc916d;
+    border: none;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    outline: none;
+    cursor: pointer; }
+  .price-select #amount {
+    border: none;
+    width: 50%;
+    padding: 0;
+    color: #848484;
+    outline: none; }
+
+/* RADIO */
+.my-size input[type="checkbox"] {
+  display: none; }
+
+.my-size label {
+  cursor: pointer; }
+
+.my-size label::before {
+  content: 'XS';
+  display: block;
+  background-color: #f4f4f4;
+  color: #4d4d4d;
+  font-size: .8rem;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  padding: 9px 0px; }
+
+.my-size input[type="checkbox"]:checked + label::before {
+  background-color: #fc916d;
+  color: #fff; }
+
+.my-size__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.my-size__item {
+  margin-right: 8px; }
+  .my-size__item:nth-child(2) label::before {
+    content: 'S'; }
+  .my-size__item:nth-child(3) label::before {
+    content: 'M'; }
+  .my-size__item:nth-child(4) label::before {
+    content: 'L'; }
+  .my-size__item:nth-child(5) label::before {
+    content: 'XL'; }
+
+.my-size__title {
+  font-size: .8rem;
+  color: #4d4d4d;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+  line-height: 1; }
 
 /* allways bottom */
 /*==========  Desktop First Method  ==========*/

@@ -157,6 +157,21 @@ $( document ).ready(function(){
 		}
 	});
 
+	$( function() {
+		$( "#slider-range" ).slider({
+		range: true,
+		min: 0,
+		max: 20000,
+		step: 100,
+		values: [0, 5000],
+		slide: function( event, ui ) {
+		$( "#amount" ).val( "\u20bd" + ui.values[ 0 ] + " - \u20bd" + ui.values[ 1 ] );
+		}
+		});
+		$( "#amount" ).val( "\u20bd" + $( "#slider-range" ).slider( "values", 0 ) +
+		" - \u20bd" + $( "#slider-range" ).slider( "values", 1 ) );
+	});
+
 	//E-mail Ajax Send
 	$("").submit(function() { //Change
 		var th = $(this);
