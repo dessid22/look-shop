@@ -157,6 +157,7 @@ $( document ).ready(function(){
 		}
 	});
 
+	// Ползунок цен
 	$( function() {
 		$( "#slider-range" ).slider({
 		range: true,
@@ -170,6 +171,36 @@ $( document ).ready(function(){
 		});
 		$( "#amount" ).val( "\u20bd" + $( "#slider-range" ).slider( "values", 0 ) +
 		" - \u20bd" + $( "#slider-range" ).slider( "values", 1 ) );
+	});
+
+	// Настройки слайдера .top-slider
+	$(".brands-slider").owlCarousel({
+		nav: true,
+		dots: false,
+		loop: true,
+		responsiveClass: true,
+	    responsive:{
+	        0:{
+	            items: 2
+	        },
+	        576:{
+	            items: 3
+	        },
+	        768:{
+	            items: 4
+	        },
+	        992:{
+	            items: 6
+	        },
+	        1200:{
+	            items: 7
+	        }
+	    },
+		smartSpeed: 800,
+		fluidSpeed: 800,
+		navSpeed: 800,
+		dotsSpeed: 800,
+		dragEndSpeed: 800
 	});
 
 	//E-mail Ajax Send

@@ -4,8 +4,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-	.basic-menu__item
-		margin-left: 20px
+	.menu-box
+		.basic-menu__item
+			margin-left: 20px
 	// .goods-slider__model
 	// 	font-size: .8rem
 
@@ -13,8 +14,11 @@
 	.custom-care
 		padding: 10px 0
 		border-bottom: 1px solid #444
-	.basic-menu
-		margin-bottom: 40px
+	.menu-box
+		.basic-menu
+			margin-bottom: 40px
+	.pagenav-box_top
+		display: none
 
 
 @media only screen and (max-width : 767px)
@@ -35,32 +39,33 @@
 			white-space: normal
 		&__input
 			width: 100%
-	.burger-link
-		display: block
-	.basic-menu
-		position: fixed
-		left: 0
-		top: 0
-		z-index: 3
-		width: 200px
-		height: 100vh
-		transition: all 0.5s ease
-		transform: translateX(-100%)
-		background-color: #fafafa
-		padding: 20px 0
-		&__list
-			flex-direction: column
-			align-items: flex-start
-			position: relative
-		&__item
-			margin-bottom: 10px
-			position: static
-		&__sub
-			width: 100%
-		&_mobile
-			transform: translateX(0)
-	.basic-menu__item:first-child
-		margin-left: 20px
+	.menu-box
+		.burger-link
+			display: block
+		.basic-menu
+			position: fixed
+			left: 0
+			top: 0
+			z-index: 3
+			width: 200px
+			height: 100vh
+			transition: all 0.5s ease
+			transform: translateX(-100%)
+			background-color: #fafafa
+			padding: 20px 0
+			&__list
+				flex-direction: column
+				align-items: flex-start
+				position: relative
+			&__item
+				margin-bottom: 10px
+				position: static
+			&__sub
+				width: 100%
+			&_mobile
+				transform: translateX(0)
+		.basic-menu__item:first-child
+			margin-left: 20px
 	.logo
 		margin-bottom: 30px
 		align-items: start
@@ -90,8 +95,13 @@
 		color: #fff
 	.goods-slider .owl-nav button.owl-next
 		right: 0
-	.pagenav-box_top
+	.sidebar-module:nth-of-type(1)
 		display: none
+	// .sidebar-module:nth-of-type(2),
+	// .sidebar-module:nth-of-type(3)
+	// 	position: absolute
+	// 	top: 0
+	// 	border: 1px solid red
 
 @media only screen and (max-width : 575px)
 	.custom-care
@@ -104,6 +114,12 @@
 	.tabs__caption li
 		font-size: .9rem
 		padding: 0 10px
+	.card__model
+		font-size: .8rem
+	.card__price
+		font-size: .9rem
+		&::before
+			font-size: .8rem
 
 
 /*==========  Mobile First Method  ==========*/
