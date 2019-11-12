@@ -33,10 +33,10 @@ gulp.task('browser-sync', function() { // Создаем таск "browser-sync"
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+        // 'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
         'app/libs/owl/owl.carousel.min.js', // Берем Owlcarousel
-        'app/libs/waypoints/waypoints.min.js', // и т.д.
-        'app/libs/animate/animate-css.js',
+        // 'app/libs/waypoints/waypoints.min.js', // и т.д.
+        // 'app/libs/animate/animate-css.js',
         'app/libs/jquery-ui-1.12.1/jquery-ui.min.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
