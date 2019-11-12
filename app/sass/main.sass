@@ -1167,6 +1167,121 @@ header
 		&::before
 			content: "\e90d"
 
+/* ABOUT */
+
+.s-about
+	// text-align: center
+	font-size: .9rem
+	font-family: Arial, sans-serif
+	padding-bottom: 20px
+	h2
+		color: #414141
+		font-size: 1.5rem
+		font-family: Arial, sans-serif
+		font-weight: 300
+		text-align: center
+		margin-bottom: 20px
+		line-height: 1
+
+/* PAY */
+
+
+.s-pay
+	background-color: #f8f8f8
+	padding: 15px 0
+.pay
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 100%
+	flex-wrap: wrap
+	&__item
+		width: 60px
+		height: 40px
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: contain
+		margin: 0 5px
+		background-color: #f7f7f7
+		overflow: hidden
+	h5
+		font-weight: 300
+
+
+/* BOTTOM BOX */
+
+.bottom-box
+	background-color: #ededed
+	padding: 30px 0
+	&__item
+		// border: 1px solid red
+	.social-box
+		flex-wrap: wrap
+		&__item
+			border-radius: 50%
+			width: 40px
+			height: 40px
+			padding: 0
+			background-color: #4c4c4b
+			position: relative
+			margin-right: 10px
+			margin-bottom: 10px
+			span
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				color: #fff
+			&:hover
+				background-color: $accent-color
+
+.info-menu
+	h3
+		color: #544f4d
+		font-family: Arial, sans-serif
+		font-weight: 300
+		margin-bottom: 10px
+		line-height: 1
+	&__item
+		line-height: 1
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	&__link
+		color: #544f4d
+		font-size: .8rem
+		text-decoration: none
+		line-height: 1
+		&:hover
+			color: #544f4d
+
+.bottom-line
+	padding: 25px 0
+	background-color: #000
+	color: #8d8d8d
+	font-size: .8rem
+
+.bottom-info
+	display: flex
+	&__item
+		margin-right: 10px
+		&:last-child
+			.bottom-info__link
+				padding-right: 0
+				border-right: none
+	&__link
+		color: #8d8d8d
+		font-size: .8rem
+		border-right: 1px solid #8d8d8d
+		padding-right: 10px
+		text-decoration: none
+		&:hover
+			color: #8d8d8d
+			text-decoration: underline
+.copyright
+		text-align: right
+
+
 /* allways bottom */
 
 @import "media"

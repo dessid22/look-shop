@@ -1459,6 +1459,132 @@ header {
     .brands-slider .owl-nav button.owl-next::before {
       content: "\e90d"; }
 
+/* ABOUT */
+.s-about {
+  font-size: .9rem;
+  font-family: Arial, sans-serif;
+  padding-bottom: 20px; }
+  .s-about h2 {
+    color: #414141;
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1; }
+
+/* PAY */
+.s-pay {
+  background-color: #f8f8f8;
+  padding: 15px 0; }
+
+.pay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .pay__item {
+    width: 60px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 5px;
+    background-color: #f7f7f7;
+    overflow: hidden; }
+  .pay h5 {
+    font-weight: 300; }
+
+/* BOTTOM BOX */
+.bottom-box {
+  background-color: #ededed;
+  padding: 30px 0; }
+  .bottom-box .social-box {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .bottom-box .social-box__item {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      background-color: #4c4c4b;
+      position: relative;
+      margin-right: 10px;
+      margin-bottom: 10px; }
+      .bottom-box .social-box__item span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        color: #fff; }
+      .bottom-box .social-box__item:hover {
+        background-color: #fc916d; }
+
+.info-menu h3 {
+  color: #544f4d;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 10px;
+  line-height: 1; }
+
+.info-menu__item {
+  line-height: 1;
+  margin-bottom: 10px; }
+  .info-menu__item:last-child {
+    margin-bottom: 0; }
+
+.info-menu__link {
+  color: #544f4d;
+  font-size: .8rem;
+  text-decoration: none;
+  line-height: 1; }
+  .info-menu__link:hover {
+    color: #544f4d; }
+
+.bottom-line {
+  padding: 25px 0;
+  background-color: #000;
+  color: #8d8d8d;
+  font-size: .8rem; }
+
+.bottom-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .bottom-info__item {
+    margin-right: 10px; }
+    .bottom-info__item:last-child .bottom-info__link {
+      padding-right: 0;
+      border-right: none; }
+  .bottom-info__link {
+    color: #8d8d8d;
+    font-size: .8rem;
+    border-right: 1px solid #8d8d8d;
+    padding-right: 10px;
+    text-decoration: none; }
+    .bottom-info__link:hover {
+      color: #8d8d8d;
+      text-decoration: underline; }
+
+.copyright {
+  text-align: right; }
+
 /* allways bottom */
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
@@ -1473,7 +1599,11 @@ header {
   .menu-box .basic-menu {
     margin-bottom: 40px; }
   .pagenav-box_top {
-    display: none; } }
+    display: none; }
+  .bottom-box__item {
+    margin-bottom: 30px; }
+  .bottom-box {
+    padding-bottom: 0; } }
 
 @media only screen and (max-width: 767px) {
   .slider-wow {
@@ -1574,7 +1704,14 @@ header {
   .goods-slider .owl-nav button.owl-next {
     right: 0; }
   .sidebar-module:nth-of-type(1) {
-    display: none; } }
+    display: none; }
+  .copyright {
+    text-align: center; }
+  .bottom-info {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 
 @media only screen and (max-width: 575px) {
   .custom-care {
@@ -1598,7 +1735,31 @@ header {
   .card__price {
     font-size: .9rem; }
     .card__price::before {
-      font-size: .8rem; } }
+      font-size: .8rem; }
+  .bottom-box__item {
+    text-align: center; }
+  .bottom-box .social-box {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .bottom-info {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .bottom-info__link {
+    padding-right: 0;
+    border-right: none; } }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
